@@ -1,0 +1,23 @@
+docker run nginx
+
+docker ps --all
+
+docker stop CONTAINER ID or NAME
+
+docker rm CONTAINER ID or NAME
+
+docker run --name mrnginx -d -p 8888:80 nginx
+
+docker pull mysql:5.7
+
+docker network create web
+
+docker run --name mysql --network web -e MYSQL_ROOT_PASSWORD=1111 -e MYSQL_DATABASE=web_db -e MYSQL_USER=wordpress -e MYSQL_PASSWORD=wordpress -d mysql:5.7
+
+docker run --name pma --network web -p 8888:80 -e PMA_ARBITRARY=1 -d phpmyadmin/phpmyadmin
+
+docker-compose up
+
+docker-compose down
+ npx nodemon index.js
+ 
